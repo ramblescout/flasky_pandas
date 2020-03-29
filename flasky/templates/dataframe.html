@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Tables{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>Put a Panda here: </h1>
+</div>
+  {% for table in tables %}
+    <h2>{{titles[loop.index]}}</h2>
+    {{ table|safe }}
+  {% endfor %}
+
+{% endblock %}
